@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    prometheus.io/scrape: 'true'
+  name: "{{  .Chart.Name }}-service"
+  labels:
+    app.kubernetes.io/name: {{ include "starter-kit.name" . }}
+    helm.sh/chart: {{ include "starter-kit.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app: {{ .Release.Name }}
+  labels:
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+  - name: 8080-tcp  
+    port: {{ .Values.service.servicePort }}
+  selector:
+    app: "{{  .Chart.Name }}-selector"
