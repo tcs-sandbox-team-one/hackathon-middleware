@@ -68,7 +68,7 @@ vcsInfo:
   repoUrl: ""
   branch: ""
 
-partOf: covidmgmtapp
+partOf: oneclickdeployment
 
 connectsTo: ""
 
