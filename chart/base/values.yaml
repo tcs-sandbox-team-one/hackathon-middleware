@@ -68,8 +68,8 @@ vcsInfo:
   repoUrl: ""
   branch: ""
 
-partOf: oneclickdeployment
+partOf: covidmanagement
 
-connectsTo: ""
+connectsTo: ibm-tcs-hackathon-hospitals-backend
 
 runtime: nodejs
