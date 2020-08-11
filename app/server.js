@@ -15,6 +15,10 @@ app.get("/", (req, res) => {
   res.send("Middleware server is up and running....");
 });
 
+app.get("/health", (req, res) => {
+  res.send("Healthcheck success....");
+});
+
 app.post("/book", async (req, res) => {
   const userDetails = req.body.userDetails;
   const hospitalDetails = req.body.hospitalDetails;
