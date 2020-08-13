@@ -18,6 +18,10 @@ app.get("/", (req, res) => {
   res.send("Middleware server is up and running....");
 });
 
+app.get("/health", (req, res) => {
+  res.send("health chec is up and running....");
+});
+
 app.post("/book", async (req, res) => {
   res.header("Access-Control-Allow-Origin", "*");
 
